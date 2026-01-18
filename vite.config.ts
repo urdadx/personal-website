@@ -1,6 +1,7 @@
 import mdx from "@mdx-js/rollup";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import viteReact from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkGfm from "remark-gfm";
@@ -27,6 +28,9 @@ export default defineConfig({
 			preset: "node-server",
 		}),
 		tanstackStart(),
+		viteReact({
+			include: /\.(mdx|md|jsx|js|tsx|ts)$/,
+		}),
 		tailwindcss(),
 	],
 });

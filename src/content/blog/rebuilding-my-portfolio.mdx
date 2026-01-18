@@ -1,0 +1,40 @@
+---
+title: Rebuilding my website with Tanstack Start
+description: How I built this website to be simple and fast using TanStack Start
+date: 2026-01-18
+readingTime: 3 min
+---
+
+When building a portfolio site, it’s easy to overdo things. You start with a simple idea, add animations and complex layouts, and before long, you’ve built something that loads slowly and is hard to maintain.
+
+I wanted something else. Something that loads fast, looks clean, and stays focused on the content.
+
+## The Stack
+
+This portfolio is built with [TanStack Start](https://tanstack.com/start), a full-stack React framework with file-based routing and server-side rendering. For styling, I use [Tailwind CSS v4](https://tailwindcss.com) and [Shadcn/ui](https://ui.shadcn.com) components.
+
+The site is written in [TypeScript](https://www.typescriptlang.org) and built with [Vite](https://vitejs.dev). Blog posts are plain markdown files, parsed with [gray-matter](https://github.com/jonschlinkert/gray-matter) and rendered using [react-markdown](https://github.com/remarkjs/react-markdown).
+
+## Why TanStack Start
+
+I chose TanStack Start over other alternatives like Next.js because it gives me more control with less magic. The mental model feels closer to standard React, and I don’t have to work around framework-specific conventions as often.
+
+Data fetching, routing, and server logic feel explicit instead of hidden. It’s easier to understand what runs on the server and what runs on the client, which makes the app simpler to reason about.
+
+For a small portfolio, Next.js can feel heavy. TanStack Start stays lightweight, fast, and flexible without getting in the way.
+
+I could have chosen a better option like [Astro](https://astro.build). Heck, my [old website](https://urdadx.vercel.app) was even built using Astro. But after building [Padyna](https://padyna.com) with TanStack Start, it felt like home. . I really like TanStack Start’s mental model—file-based routing, tight integration with TanStack Query, and how everything fits together.
+
+I also wanted this site to do things that require a server, and I didn’t want to spin up a separate server just to make that work. With Astro, that felt like extra setup. With TanStack Start’s `createServerFn` it's simple and built in.
+
+## Performance
+
+The site scores 100 on all Lighthouse metrics. Server-side rendering gives a fast first paint, and optimized font loading keeps things quick.
+
+![Lighthouse Score](/minimal-portfolio/lighthouse.png)
+
+## What’s Next
+
+I plan to write more about building products, solving technical problems and life in general so stay tuned.
+
+> Sometimes, the simplest solution is the best one.

@@ -13,9 +13,11 @@ My personal website built with TanStack Start (full-stack React), Shadcn/ui, Tai
 
 1. Ensure Node.js 18+ and pnpm are installed.
 2. Install dependencies:
+
       ```bash
       pnpm install
       ```
+
 3. Launch the dev server at http://localhost:3000 with hot reload and SSR:
       ```bash
       pnpm run dev

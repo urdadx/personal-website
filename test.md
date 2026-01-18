@@ -1,11 +1,11 @@
 ---
-title: A Minimal Portfolio with TanStack Start
-description: How I keep this portfolio simple and fast using TanStack Start
+title: Rebuilding my website with Tanstack Start
+description: How I built this website to be simple and fast using TanStack Start
 date: 2026-01-18
 readingTime: 3 min
 ---
 
-When building a portfolio site, it’s easy to overdo it. You start with a simple idea, add animations and complex layouts, and before long, you’ve built something that loads slowly and is hard to maintain.
+When building a portfolio site, it’s easy to overdo things. You start with a simple idea, add animations and complex layouts, and before long, you’ve built something that loads slowly and is hard to maintain.
 
 I wanted something else. Something that loads fast, looks clean, and stays focused on the content.
 
@@ -17,11 +17,15 @@ The site is written in [TypeScript](https://www.typescriptlang.org) and built wi
 
 ## Why TanStack Start
 
-I chose TanStack Start over Next.js because it gives me more control with less magic. The mental model feels closer to standard React, and I don’t have to work around framework-specific conventions as often.
+I chose TanStack Start over other alternatives like Next.js because it gives me more control with less magic. The mental model feels closer to standard React, and I don’t have to work around framework-specific conventions as often.
 
 Data fetching, routing, and server logic feel explicit instead of hidden. It’s easier to understand what runs on the server and what runs on the client, which makes the app simpler to reason about.
 
 For a small portfolio, Next.js can feel heavy. TanStack Start stays lightweight, fast, and flexible without getting in the way.
+
+I could have chosen a better option like [Astro](https://astro.build). Heck, my [old website](https://urdadx.vercel.app) was even built using Astro. But after building [Padyna](https://padyna.com) with TanStack Start, it felt like home. I really like TanStack Start’s mental model—file-based routing, tight integration with TanStack Query, and how everything fits together.
+
+I also wanted to make server-side API calls which would require I spin up an extra server if I were to go with Astro. However, with TanStack Start’s `createServerFn` , it's simple and built in.
 
 ## Performance
 

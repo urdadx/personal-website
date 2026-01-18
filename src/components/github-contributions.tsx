@@ -211,7 +211,7 @@ export const GithubContributions = memo(function GithubContributions({
   };
 
   return (
-    <div className="rounded-xl border border-border/50 bg-card/60 p-4 relative">
+    <div className="rounded-xl border border-border/50 bg-card/60 p-4 sm:p-6 relative">
       <div className="mb-6 flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm font-medium sm:text-base" style={{ fontFamily: "Inter, sans-serif" }}>
           {typeof totalContributions === "number"

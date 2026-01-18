@@ -1,9 +1,9 @@
 /// <reference types="vite/client" />
+import { ThemeToggle } from "@/components/theme-toggle";
 import appCss from "@/styles/app.css?url";
 import fontsCss from "@/styles/fonts.css?url";
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { ThemeProvider } from "next-themes";
-import { ThemeToggle } from "@/components/theme-toggle";
 import type { ReactNode } from "react";
 
 export const Route = createRootRoute({
@@ -105,7 +105,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         </noscript>
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <ThemeToggle />
           {children}
         </ThemeProvider>
