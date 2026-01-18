@@ -1,54 +1,56 @@
-# Use Node.js 20 LTS as base image
+# 1. Base image with necessary system libraries
 FROM node:20-alpine AS base
-
-# Install dependencies only when needed
-FROM base AS deps
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+# Move libc6-compat to base so ALL stages inherit it (Crucial for build tools)
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install dependencies based on the preferred package manager
+# 2. Install dependencies (All deps, including dev)
+FROM base AS deps
 COPY package.json package-lock.json* ./
-RUN npm ci --omit=dev
+# Install ALL dependencies (needed for the build step)
+RUN npm ci
 
-# Rebuild the source code only when needed
+# 3. Build the application
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Install dev dependencies for build
-RUN npm ci
+# --- ADD THIS SECTION ---
+# Define the argument (passed from Dokploy build args)
+ARG GITHUB_TOKEN
+# Assign it to an ENV so the build script can access it
+ENV GITHUB_TOKEN=$GITHUB_TOKEN
 
-# Build the application with increased Node memory limit
+# Environment variables required for build usually go here
+ENV NODE_ENV production
+# Increase memory limit as you correctly identified
 ENV NODE_OPTIONS="--max-old-space-size=4096"
+
+# Run the build
 RUN npm run build
 
-# Production image, copy all the files and run the app
+# 4. Production Runner
 FROM base AS runner
 WORKDIR /app
-
 ENV NODE_ENV production
 
-# Create a non-root user
+# Create a non-root user for security
 RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN adduser --system --uid 1001 tanstack
 
-# Copy the built application
-COPY --from=builder /app/.output ./.output
-COPY --from=builder /app/package.json ./package.json
+# Copy the standalone output from the builder
+# TanStack Start/Vinxi builds to .output by default
+COPY --from=builder --chown=tanstack:nodejs /app/.output ./.output
 
-# Install only production dependencies
-RUN npm ci --omit=dev --force
+# Set user
+USER tanstack
 
-# Set the correct permissions
-USER nextjs
-
-# Expose the port the app runs on
+# Networking
 EXPOSE 3000
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
 
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
-
-# Start the application
-CMD ["npm", "start"]
+# Start the server using the Node output directly
+# This is more stable than "npm start" for production containers
+CMD ["node", ".output/server/index.mjs"]
