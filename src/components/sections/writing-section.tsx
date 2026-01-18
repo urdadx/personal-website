@@ -31,7 +31,7 @@ export function WritingSection() {
               params={{ slug: post.slug }}
               className="block group"
             >
-              <div className="flex items-start justify-between py-2 border-b border-border/20 hover:border-border/40 transition-colors">
+              <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-0 justify-between py-2 border-b border-border/20 hover:border-border/40 transition-colors">
                 <div className="flex-1">
                   <span
                     className="text-base font-medium"
@@ -52,7 +52,7 @@ export function WritingSection() {
                     </p>
                   )}
                 </div>
-                <div className="flex items-center gap-3 ml-4">
+                <div className="flex items-center gap-3 ml-0 sm:ml-4">
                   <span className="text-sm text-muted-foreground font-mono">
                     {formatDateLabel(post.date) ?? "Coming soon"}
                   </span>
@@ -70,7 +70,7 @@ export function WritingSection() {
         className="inline-flex text-start font-mono text-sm text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/50"
         direction="right"
       >
-        View blog →
+        See all blogs →
       </ComesInGoesOutUnderline>
     </section>
   );
