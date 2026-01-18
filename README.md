@@ -1,6 +1,6 @@
-# Abdul Wahab Website
+# Personal Website
 
-A modern personal website built with TanStack Start (full-stack React), Shadcn/ui, Tailwind CSS v4, and TypeScript.
+My personal website built with TanStack Start (full-stack React), Shadcn/ui, Tailwind CSS v4, and TypeScript.
 
 ## Features
 
@@ -43,5 +43,3 @@ An `.env.example` file is included with sane defaults. To rotate the password ha
 For instructions on how to deploy using docker. see
 
 For instructions on how to deploy using Docker, see [DEPLOYMENT.md](./DEPLOYMENT.md).
-# personal-website
-# personal-website
