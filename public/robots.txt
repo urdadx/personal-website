@@ -1,0 +1,15 @@
+# robots.txt for https://urdadx.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://urdadx.com/sitemap.xml
+
+# Crawl delay (in seconds) - optional, helps prevent server overload
+Crawl-delay: 1
+
+# Disallow crawling of development/admin paths if they exist
+Disallow: /api/
+Disallow: /_build/
+Disallow: /node_modules/

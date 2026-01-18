@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#ffffff"/>
+
+  <!-- Content centered vertically -->
+  <text x="100" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="300" fill="#252525" letter-spacing="-0.02em">
+    Abdul Wahab
+  </text>
+
+  <text x="100" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400" fill="#737373">
+    Software Engineer &amp; Tinkerer
+  </text>
+
+  <!-- Vertical divider line -->
+  <line x1="850" y1="250" x2="850" y2="380" stroke="#e5e5e5" stroke-width="1"/>
+
+  <text x="900" y="315" font-family="ui-monospace, monospace" font-size="24" fill="#a3a3a3">
+    urdadx.com
+  </text>
+</svg>
