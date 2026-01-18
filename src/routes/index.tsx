@@ -23,12 +23,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Abdul Wahab Abass - Product Engineer & Software Developer",
+        title: "Abdul Wahab Abass - Software Engineer & Tinkerer",
       },
       {
         name: "description",
         content:
-          "Product engineer focused on thoughtful digital experiences. Building applications for study, focus, and personal growth. View my portfolio and latest projects.",
+          "Software engineer focused on thoughtful digital experiences. Building applications for study, focus, and personal growth. View my portfolio and latest projects.",
       },
       {
         name: "keywords",
@@ -37,12 +37,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Abdul Wahab - Product Engineer & Software Developer",
+        content: "Abdul Wahab - Software Engineer & Tinkerer",
       },
       {
         property: "og:description",
         content:
-          "Product engineer focused on thoughtful digital experiences. Building applications for study, focus, and personal growth.",
+          "Software engineer focused on thoughtful digital experiences. Building applications for study, focus, and personal growth.",
       },
       {
         property: "og:type",
