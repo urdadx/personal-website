@@ -25,7 +25,7 @@ For a small portfolio, Next.js can feel heavy. TanStack Start stays lightweight,
 
 I could have chosen a better option like [Astro](https://astro.build). Heck, my [old website](https://urdadx.vercel.app) was even built using Astro. But after building [Padyna](https://padyna.com) with TanStack Start, it felt like home. I really like TanStack Start’s mental model—file-based routing, tight integration with TanStack Query, and how everything fits together.
 
-I also wanted to make server-side API calls which would require I spin up an extra server if I were to go with Astro. However, with TanStack Start’s `createServerFn` , it's simple and built in.
+I also wanted to make server-side API calls which would require I spin up an extra server if I were to go with Astro. However, with TanStack Start’s `createServerFn`, it's simple and built in.
 
 ## Performance
 

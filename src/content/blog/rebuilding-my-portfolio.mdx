@@ -5,7 +5,7 @@ date: 2026-01-18
 readingTime: 3 min
 ---
 
-When building a portfolio site, it’s easy to overdo things. You start with a simple idea, add animations and complex layouts, and before long, you’ve built something that loads slowly and is hard to maintain.
+When building a personal website, it’s easy to overdo things. You start with a simple idea, add animations and complex layouts, and before long, you’ve built something that loads slowly and is hard to maintain.
 
 I wanted something else. Something that loads fast, looks clean, and stays focused on the content.
 
@@ -23,7 +23,7 @@ Data fetching, routing, and server logic feel explicit instead of hidden. It’s
 
 For a small portfolio, Next.js can feel heavy. TanStack Start stays lightweight, fast, and flexible without getting in the way.
 
-Alternatively, I could have chosen a better and more lightweight option like [Astro](https://astro.build). Heck, my [old website](https://urdadx.vercel.app) was even built using Astro. But after building [Padyna](https://padyna.com) with TanStack Start, it felt like home. I really liked TanStack Start’s mental model—file-based routing, tight integration with TanStack Query, and how everything fits together.
+Alternatively, I could have chosen a better and more lightweight option like [Astro](https://astro.build). Infact, my [old website](https://urdadx.vercel.app) was even built using Astro. But after building [Padyna](https://padyna.com) with TanStack Start, it felt like home. I really liked TanStack Start’s mental model—file-based routing, tight integration with TanStack Query, and how everything fits together.
 
 I also wanted to make server-side API calls which would require I spin up an extra server if I were to go with Astro. However, with TanStack Start’s `createServerFn` , it's simple and built in.
 
@@ -32,6 +32,7 @@ I also wanted to make server-side API calls which would require I spin up an ext
 The site scores 100 on all Lighthouse metrics. Server-side rendering gives a fast first paint, and optimized font loading keeps things quick.
 
 ![Lighthouse Score](/minimal-portfolio/lighthouse.png)
+![SEO Score](/minimal-portfolio/seo-stats.png)
 
 ## What’s Next
 

@@ -20,9 +20,9 @@ export function Header() {
             className="text-base text-muted-foreground leading-loose"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            I'm a software engineer focused on thoughtful digital experiences, creating tools that
-            feel calm, tactile, and purposeful. Outside coding, I enjoy watching Formula 1 and
-            football.
+            I'm a software engineer focused on crafting thoughtful digital experiences, creating
+            tools that feel calm, tactile, and purposeful. Outside coding, I enjoy watching Formula
+            1 and football.
           </p>
         </div>
       </div>
