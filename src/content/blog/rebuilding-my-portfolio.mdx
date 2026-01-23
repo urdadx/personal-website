@@ -1,33 +1,29 @@
 ---
 title: Rebuilding my website with Tanstack Start
 description: How I built this website to be simple and fast using TanStack Start
-date: 2026-01-18
+date: 2026-01-23
 readingTime: 3 min
 ---
 
 This rebuild was about stripping things back to the essentials. I wanted something that loads fast, looks clean, and stays focused on the content.
 
-Most of this website is boring, and that is a intentional. There are no clever transitions competing for attention. Just pages that load quickly, and do what they need to do.
-
-
+Most of this website is boring, and that is intentional. There are no clever transitions competing for attention. Just pages that load quickly, and do what they need to do.
 
 ## The Stack
 
 This website is built with [TanStack Start](https://tanstack.com/start), a full-stack React framework with file-based routing and server-side rendering. For styling, I use [Tailwind CSS v4](https://tailwindcss.com) and some vanilla CSS.
 
-The site is written in [TypeScript](https://www.typescriptlang.org) (duh) and built with [Vite](https://vitejs.dev). Blog posts are plain markdown files, parsed with [gray-matter](https://github.com/jonschlinkert/gray-matter) and rendered using [react-markdown](https://github.com/remarkjs/react-markdown).
+The site is written in [TypeScript](https://www.typescriptlang.org) and built with [Vite](https://vitejs.dev). Blog posts are plain markdown files, parsed with [gray-matter](https://github.com/jonschlinkert/gray-matter) and rendered using [react-markdown](https://github.com/remarkjs/react-markdown).
 
 ## Why TanStack Start
 
-I chose TanStack Start over other alternatives like Next.**js** because it gives me more control with less magic. The mental model feels closer to standard React, and I don’t have to work around framework-specific conventions as often.
+I chose TanStack Start over other alternatives like [Next.js](https://nextjs.org) because it gives me more control with less magic. The mental model feels closer to standard React, and I don’t have to work around framework-specific conventions as often.
 
 Data fetching, routing, and server logic feel explicit instead of hidden. It’s easier to understand what runs on the server and what runs on the client, which makes the app simpler to reason about.
 
 For a small portfolio, Next.js can feel heavy. TanStack Start stays lightweight, fast, and flexible without getting in the way.
 
-Alternatively, I could have chosen a more lightweight option like Astro
-. In fact, my old website was built using Astro. However, after building Padyna
- with TanStack Start, it felt like home. I really liked TanStack Start’s mental model, including file-based routing, tight integration with TanStack Query, and how everything fits together.
+Alternatively, I could have chosen a more lightweight option like [Astro](https://astro.build). In fact, my [old website](https://urdadx.vercel.app) was built using Astro. However, after building [Padyna](https://padyna.com) with TanStack Start, it felt like home. I really liked TanStack Start’s mental model, including file-based routing, tight integration with TanStack Query, and how everything fits together.
 
 I also wanted to make server-side API calls which would require I spin up an extra server if I were to go with Astro. However, with TanStack Start’s ```createServerFn``` , it's simple and built in.
 
