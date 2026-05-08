@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+import { ComesInGoesOutUnderline } from "@/components/underline/comes-in-goes-out-underline";
 import { blogComponentsBySlug, blogFrontmatterBySlug } from "@/lib/blog-posts";
 import { MDXProvider } from "@mdx-js/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -295,6 +296,16 @@ function BlogPost() {
 						<PostContent />
 					</MDXProvider>
 				</article>
+
+				<footer className="mt-16 border-t border-border/20 pt-6">
+					<ComesInGoesOutUnderline
+						as="a"
+						href="/blog"
+						className="inline-flex text-start font-mono text-sm text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/50"
+						direction="right">
+						See other blogs →
+					</ComesInGoesOutUnderline>
+				</footer>
 			</div>
 		</div>
 	);

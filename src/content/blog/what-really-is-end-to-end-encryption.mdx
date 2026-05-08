@@ -1,0 +1,62 @@
+---
+title: What Really Is End-to-End Encryption?
+description: Breaking down what end-end encryption truly means beyond the term 
+date: 2026-05-08
+readingTime: 5 min
+---
+
+After the recent lawsuit filed against Meta by WhatsApp users in Australia[^1], alleging that Meta can access users’ messages through internal systems despite public claims that no one, not even WhatsApp, can read them, I found myself thinking more deeply about a term we hear all the time on these platforms: “end-to-end encryption.”
+
+That curiosity pulled me into the deeper layers of security, and eventually into the rabbit hole of cryptography and network security. At some point, I figured the best way to really understand it was to build something myself. That’s how I ended up working on [Iced Vault](https://github.com/urdadx/iced-vault) 
+
+**So, what is end-to-end encryption?**
+
+If you use any social media platform, it’s probably a term you’ve come across more than once. In theory, it means that only the sender and the recipient can access the messages or media they share, keeping them hidden from hackers, third parties, and even the platforms themselves. Whether companies actually uphold the standard they advertise is still an open question, one we don’t fully have answers to and probably won’t anytime soon. But that’s not what this post is about.
+
+My mission with this post is to break down what end-end encryption truly means beyond the term and how it works behind the scenes. Buckle up because we are going to get a bit technical🙂
+
+## How End-to-End Encryption Works
+
+At its core, end-to-end (E2EE) encryption is actually a simple idea. Let me use the classic example all CS students have heard a thousand times. Alice and Bob.
+
+Imagine Alice wants to send a message to Bob. Instead of writing it on paper, she puts it in a box and locks it with a key that only Bob has. She does not keep a copy of the key, and the platform delivering the message does not have it either. They can carry the box from Alice to Bob, but they cannot open it.
+
+Only Bob, with his key, can unlock the box and read the message.
+
+So how does this translate to computers and the internet? How does Alice and Bob get these “keys” in the first place and how does it work without ever sharing them openly?
+
+## Asymmetric Encryption (Public & Private Keys)
+
+Asymmetric encryption relies on two keys. A public and a private key typically generated using cryptographic algorithms like Ed25519 (Twisted Edward Curves). These keys are mathematically linked, but serve different purposes. The public key can be shared openly. Using our example from earlier, Bob can send it to Alice, publish it on a server, or attach it to his profile. It does not need to be protected. The private key is the sensitive part. It stays on Bob’s device and is never shared.
+
+Now here’s the important part.
+
+Anything encrypted with the public key can only be decrypted with the corresponding private key. Not the other way around. This one-way property is what makes the system secure.
+
+If Bob wants to send a message to Alice, he does not use his own public key. He uses **Alice’s public key** to encrypt the message into ciphertext. Once encrypted, the only key that can decrypt it is **Alice’s private key**.
+
+So when Alice receives the message, she uses her private key to turn it back into human readable text. The same process happens in reverse when Alice replies. She encrypts using Bob’s public key, and only Bob can decrypt it with his private key.
+
+This is a simple illustration of how it happens
+
+![End-to-End Encryption Diagram](/end-end-encryption/end-to-end-diagram.png)
+
+## What E2EE Actually Protects
+When implemented properly, E2EE protects message content from intermediaries.
+That means:
+- The network provider should not be able to read the message
+- The platform carrying the message should not be able to read it
+- An attacker intercepting the traffic should not be able to read it.
+
+But there is an important condition here: the endpoints must be trustworthy.
+If Alice's or Bob's device is compromised or stolenthen the security of the system can be broken. E2EE does not protect against vulnerabilities on the endpoints.
+
+## Where the Promise Can Break
+
+There have been some cases where a service claimed to offer end-to-end encryption, but quietly built ways around it *“cough cough, WhatsApp👀”*. A service might store encryption keys in a way that lets them recover your data. Features like cloud backups can completely break the E2EE model if your data ends up stored in plain text or with keys the company controls.
+
+And then there is external pressure. Governments and regulators do not like systems they cannot access, so companies are often pushed to design around that. What gets marketed as "secure" can end up being a compromise behind the scenes.
+
+So yes, end-to-end encryption sounds solid. But in practice, that guarantee is only as strong as the implementation. If the system is designed in a way that allows access, then it’s not really end-to-end encrypted in the way most people think.
+
+[^1]: [Class Action Lawsuit Alleges WhatsApp Accessed Encrypted Chats, Breaches Users' Privacy](https://www.medianama.com/2026/01/223-class-action-lawsuit-whatsapp-users-privacy-encryption/#:~:text=Accessed%20Encrypted%20Chats-,Class%20Action%20Lawsuit%20Alleges%20WhatsApp,Encrypted%20Chats%2C%20Breaches%20Users'%20Privacy&text=Seven%20international%20individuals%20have%20filed,their%20own%20country%20or%20Ireland.)
