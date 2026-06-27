@@ -6,6 +6,17 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import type { MDXComponents } from "mdx/types";
 import type { ReactNode } from "react";
+import { useEffect } from "react";
+
+declare global {
+	interface Window {
+		Bizme?: ((...args: unknown[]) => void) & { q?: IArguments[] };
+	}
+}
+
+const BIZME_INSTALL_KEY = "6H3QbhkySUbWa1zsyqnQPa6Wa5oHZe61";
+const BIZME_API_URL = "https://bizme-api.urdadx.com";
+const BIZME_SDK_URL = "https://bizme.urdadx.com/sdk.js";
 
 const getBlogPost = createServerFn({ method: "GET" })
 	.inputValidator((slug: string) => slug)
@@ -297,6 +308,8 @@ function BlogPost() {
 					</MDXProvider>
 				</article>
 
+				<BizmeComments />
+
 				<footer className="mt-16 border-t border-border/20 pt-6">
 					<ComesInGoesOutUnderline
 						as="a"
@@ -309,4 +322,35 @@ function BlogPost() {
 			</div>
 		</div>
 	);
+}
+
+function BizmeComments() {
+	useEffect(() => {
+		if (window.self !== window.top || window.location.pathname === "/widget") {
+			return;
+		}
+
+		if (typeof window.Bizme !== "function") {
+			const queue: IArguments[] = [];
+			const stub = function () {
+				queue.push(arguments);
+			};
+			stub.q = queue;
+			window.Bizme = stub;
+		}
+
+		if (!document.querySelector(`script[src="${BIZME_SDK_URL}"]`)) {
+			const script = document.createElement("script");
+			script.src = BIZME_SDK_URL;
+			script.async = true;
+			document.head.appendChild(script);
+		}
+
+		window.Bizme("init", {
+			installKey: BIZME_INSTALL_KEY,
+			apiUrl: BIZME_API_URL,
+		});
+	}, []);
+
+	return <section aria-label="Comments" className="mt-16" />;
 }
