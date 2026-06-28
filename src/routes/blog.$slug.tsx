@@ -376,5 +376,5 @@ function BizmeComments() {
     });
   }, []);
 
-  return <section aria-label="Comments" className="mt-16" />;
+  return <section aria-label="Comments" className="my-14" />;
 }
