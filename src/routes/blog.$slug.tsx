@@ -374,6 +374,25 @@ function BizmeComments() {
       installKey: BIZME_INSTALL_KEY,
       apiUrl: BIZME_API_URL,
     });
+
+    return () => {
+      const script = document.querySelector(
+        `script[src="${BIZME_SDK_URL}"]`,
+      );
+      if (script) script.remove();
+
+      document
+        .querySelectorAll<HTMLElement>(
+          '[class*="bizme"], [id*="bizme"], [class*="Bizme"], [id*="Bizme"]',
+        )
+        .forEach((el) => el.remove());
+
+      try {
+        window.Bizme?.("destroy");
+      } catch {}
+
+      delete window.Bizme;
+    };
   }, []);
 
   return <section aria-label="Comments" className="my-14" />;
