@@ -17,6 +17,14 @@ export const projects: Project[] = [
     repoKey: "padyna",
   },
   {
+    title: "Bizme",
+    description: "Better audience engagement backend for your content",
+    link: "https://bizme.urdadx.com",
+    year: "2026",
+    status: "active",
+    repoKey: "bizme",
+  },
+  {
     title: "Librelinks",
     description: "An open-source link in bio platform",
     link: "https://links.urdadx.com",
