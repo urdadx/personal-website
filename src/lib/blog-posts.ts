@@ -6,6 +6,7 @@ export interface BlogFrontmatter {
   description: string;
   date: string;
   readingTime: string;
+  ogImage?: string;
 }
 
 export type BlogContentComponent = ComponentType<Record<string, unknown>>;
@@ -45,6 +46,7 @@ const entries: BlogEntry[] = Object.entries(componentModules).flatMap(([filePath
     description: data.description ?? "",
     date: normalizedDate,
     readingTime: data.readingTime ?? "5 min",
+    ogImage: data.ogImage,
   };
 
   return [

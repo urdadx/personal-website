@@ -1,40 +1,56 @@
----
-title: Rebuilding my website with Tanstack Start
-description: How I built this website to be simple and fast using TanStack Start
-date: 2026-01-18
-readingTime: 3 min
----
 
-When building a portfolio site, it’s easy to overdo things. You start with a simple idea, add animations and complex layouts, and before long, you’ve built something that loads slowly and is hard to maintain.
+Cloud subscriptions have quietly become another monthly bill. A friend of mine was billed nearly $200 by Google Cloud for a hobby project with fewer than 20 users. Then my own VPS provider, Hetzner, announced a price increase from $9 to $14 a month as rising RAM and hardware costs continue to push hosting prices upward. 
+That got me thinking about how dependent we have become on cloud services. Today, much of the internet runs on infrastructure owned by a handful of companies like Amazon, Google, and Microsoft. Our photos, documents, applications, and even personal backups often live on someone else's servers.
+Roll it back fifteen or twenty years ago, the web was far more decentralized. Personal websites, home servers, forums, and self-hosted services were much more common. You had more opportunities to own your infrastructure and decide where your data lived instead of automatically handing it off to a cloud provider.
+That realization made me wonder: could I reclaim a small piece of that independence?
 
-I wanted something else. Something that loads fast, looks clean, and stays focused on the content.
+BRINGING MY OLD PC FROM RETIREMENT
+I had an old Sony VAIO ultrabook gathering dust in a corner. I hadn't touched it in almost five years. By today's standards, its specs are pretty modest: 4 GB of RAM, an Intel Core i3 processor, and a 500 GB hard drive. 4 GB of RAM meant that even an idle Chrome session could bring the machine to its knees. But for a home server, those limitations hardly matter. So instead of letting it collect more dust, I decided to give it a second life. Rather than paying cloud services extra cash to host small websites, scripts, and personal projects, why not see how much I could run from a laptop I already owned? Plus i’m doing my bit in saving the planet🙂
 
-## The Stack
 
-This portfolio is built with [TanStack Start](https://tanstack.com/start), a full-stack React framework with file-based routing and server-side rendering. For styling, I use [Tailwind CSS v4](https://tailwindcss.com) and [Shadcn/ui](https://ui.shadcn.com) components.
+Image of my old PC
+SETTING UP THE MACHINE
+I decided to go with Ubuntu Server. It's one of the most mature and widely used Linux server distributions with excellent documentation. The first step was creating a bootable USB drive with the Ubuntu Server ISO. Once that was ready, I plugged it into the laptop and booted into the BIOS. On my Sony VAIO, this was as simple as pressing the ASSIST button while the laptop was powering on. From there, I selected the USB drive as the boot device instead of the hard drive that still contained Windows.
 
-The site is written in [TypeScript](https://www.typescriptlang.org) and built with [Vite](https://vitejs.dev). Blog posts are plain markdown files, parsed with [gray-matter](https://github.com/jonschlinkert/gray-matter) and rendered using [react-markdown](https://github.com/remarkjs/react-markdown).
 
-## Why TanStack Start
 
-I chose TanStack Start over other alternatives like Next.js because it gives me more control with less magic. The mental model feels closer to standard React, and I don’t have to work around framework-specific conventions as often.
+INSTALLING THE OS
+Ubuntu Server includes an installation wizard that walks you through the entire setup process. It lets you configure your language, keyboard layout, network connection, user account, and even install and enable an SSH server.
+Most of the process was simply following the prompts and choosing the options that suited my setup. The final step was wiping the old Windows installation and installing Ubuntu Server onto the laptop's hard drive. After a few minutes, the installation completed, the machine rebooted, and my old Windows laptop had officially become a Linux server.
 
-Data fetching, routing, and server logic feel explicit instead of hidden. It’s easier to understand what runs on the server and what runs on the client, which makes the app simpler to reason about.
 
-For a small portfolio, Next.js can feel heavy. TanStack Start stays lightweight, fast, and flexible without getting in the way.
+ACCESSING VIA SSH
+Once Ubuntu Server was installed, I no longer needed to connect a monitor, keyboard, or mouse to the laptop. From this point on, I would manage everything remotely using SSH (Secure Shell). SSH lets you securely access another computer's terminal over a network as if you were sitting right in front of it. Since both my laptop and server were connected to the same Wi-Fi network, all I needed was the server's IP address.
+hostname -I
+Running this command on the server displayed its local IP address. With that, I could connect from my main laptop using:
+ssh username@192.168.x.x
 
-I could have chosen a better option like [Astro](https://astro.build). Heck, my [old website](https://urdadx.vercel.app) was even built using Astro. But after building [Padyna](https://padyna.com) with TanStack Start, it felt like home. I really like TanStack Start’s mental model—file-based routing, tight integration with TanStack Query, and how everything fits together.
+CONNECTING TO MY TAILSCALE NETWORK
+Tailscale is easily one of my favorite pieces of software. It creates a secure private network between all your devices, making them feel like they're on the same local network wherever they are. For my home server, this meant I could securely SSH into it from anywhere without exposing ports on my router or setting up a VPN. My phone, laptop, Raspberry Pi, VPS, and now my server are all connected to the same Tailscale network, so hopping between them is effortless. Once Tailscale was installed, connecting to the server was as simple as:
+ssh wahab@my-server
 
-I also wanted to make server-side API calls which would require I spin up an extra server if I were to go with Astro. However, with TanStack Start’s `createServerFn`, it's simple and built in.
 
-## Performance
+HOSTING MY PROJECTS ON THE SERVER
+The whole reason I built this server was to stop paying for cloud hosting whenever I wanted to deploy a small side project. So naturally, the first thing I hosted was my personal portfolio.
+My portfolio is built with TanStack Start, so I containerized it with Docker. After installing Git on the server, I cloned the repository into the /srv directory:
+git clone https://github.com/urdadx/personal-website.git
+I then created a docker-compose.yml file in the project's root directory and deployed it with:
+docker compose up -d --build
+To make the website publicly accessible, I used Tailscale Funnel, which exposes a local service to the internet without configuring port forwarding or a reverse proxy.
+A few moments later, my portfolio was live, served entirely from a five-year-old laptop sitting on my desk. Seeing that first deployment was incredibly satisfying. It proved that this little server was more than capable of hosting the projects I would normally rent a VPS for. You can check out the hosted portfolio here
+WHATS NEXT?
+Hosting my portfolio is just the beginning. Over the next few weeks, I plan to turn this machine into a complete self-hosted platform.
+A few things on my list include:
+Immich for backing up photos instead of relying on Google Photos.
+Jellyfin as my own personal media server.
+Home Assistant for managing smart home devices and running automations locally.
+An S3-compatible object storage service for hosting images, videos, and other assets used by my projects.
+More websites, APIs, and experimental side projects that don't justify the cost of a dedicated VPS. Maybe at some point, I might create a dedicated cloud hosting platform with it so others can host their stuff.
+For a laptop that was destined for the recycling bin, I'd say it's earned its second life.
 
-The site scores 100 on all Lighthouse metrics. Server-side rendering gives a fast first paint, and optimized font loading keeps things quick.
 
-![Lighthouse Score](/minimal-portfolio/lighthouse.png)
 
-## What’s Next
 
-I plan to write more about building products, solving technical problems and life in general so stay tuned.
 
-> Sometimes, the simplest solution is the best one.
+
+

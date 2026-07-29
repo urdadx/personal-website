@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff"/>
+
+  <!-- A minimal browser frame emerging from the erased clutter. -->
+  <g fill="none" stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M390 135 Q388 119 405 118 L1006 120 Q1021 120 1020 137 L1016 493 Q1016 506 1001 506 L402 504 Q388 504 390 489 Z" stroke-width="5"/>
+    <path d="M391 175 Q660 180 1019 176" stroke-width="4"/>
+    <circle cx="424" cy="148" r="7" fill="#d94a42" stroke="none"/>
+    <circle cx="450" cy="148" r="7" fill="#ee6b2f" stroke="none"/>
+    <circle cx="476" cy="148" r="7" fill="#2775bd" stroke="none"/>
+    <path d="M471 250 q93-8 186 0 M470 275 q152-7 303 0 M470 301 q126-5 252 1" stroke-width="4"/>
+    <path d="M470 360 q78-5 155 0 M470 385 q124-5 247 1 M470 411 q98-5 197 0" stroke-width="3"/>
+    <path d="M843 244 q55-25 106 3 l-1 150 q-50 23-104 0z" stroke-width="4"/>
+    <path d="M866 339 q30-40 59 0" stroke="#2775bd" stroke-width="4"/>
+    <circle cx="897" cy="292" r="16" stroke="#ee6b2f" stroke-width="4"/>
+  </g>
+
+  <!-- Xiaohei earnestly pushes a giant eraser through the old site's noise. -->
+  <g stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M235 328 Q236 278 276 267 Q318 269 328 313 L324 411 Q307 432 260 422 Q236 408 235 328Z" fill="#181818" stroke-width="4"/>
+    <circle cx="269" cy="307" r="7" fill="#fff" stroke="none"/>
+    <circle cx="299" cy="307" r="7" fill="#fff" stroke="none"/>
+    <path d="M256 421 Q246 457 240 488 M302 424 Q311 458 309 490" fill="none" stroke-width="5"/>
+    <path d="M222 491 q19-6 27 0 M300 491 q19-5 27 2" fill="none" stroke-width="5"/>
+    <path d="M326 338 Q356 324 380 344 M323 365 Q352 359 376 377" fill="none" stroke-width="5"/>
+  </g>
+
+  <g transform="translate(76 181) rotate(-8 150 65)">
+    <path d="M0 25 Q1 10 17 10 L270 10 Q286 10 286 26 L284 111 Q283 126 268 126 L16 126 Q1 125 1 110Z" fill="#fff" stroke="#181818" stroke-width="5"/>
+    <path d="M198 11 L197 125" fill="none" stroke="#181818" stroke-width="4"/>
+    <path d="M216 38 q25-13 51 0 M216 62 q20-11 43 0 M216 87 q27-12 51 0" fill="none" stroke="#d94a42" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Erased distractions float away as loose scraps, not UI components. -->
+  <g fill="none" stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M78 104 q30-18 59 2 l-5 35 q-27 14-55-3z M166 92 q23-12 45 4 l-4 27 q-22 10-43-5z" stroke-width="3"/>
+    <path d="M102 115 l12 11 l15-22 M178 104 q11 12 22 0" stroke="#d94a42" stroke-width="3"/>
+    <path d="M91 443 q31-16 60 3 M106 468 q24-12 47 2 M145 523 q37-16 72 4" stroke-width="3"/>
+    <path d="M118 422 l-18-28 M174 481 l-13-25" stroke="#d94a42" stroke-width="4"/>
+  </g>
+
+  <!-- Orange sweep shows the movement from noise to a focused page. -->
+  <g fill="none" stroke="#ee6b2f" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M92 560 Q275 535 392 463" stroke-width="7"/>
+    <path d="M376 460 l19 2 l-8 17" stroke-width="6"/>
+    <path d="M345 212 q23-18 48-4" stroke-width="4"/>
+  </g>
+
+  <!-- Sparse handwritten-style annotations. -->
+  <g font-family="DejaVu Sans, sans-serif" font-weight="700" letter-spacing="2">
+    <text x="68" y="72" fill="#d94a42" font-size="22">TOO MUCH</text>
+    <path d="M70 81 q66 8 132 0" fill="none" stroke="#d94a42" stroke-width="3" stroke-linecap="round"/>
+    <text x="426" y="94" fill="#181818" font-size="26">JUST THE ESSENTIALS</text>
+    <path d="M427 103 q145 10 293 0" fill="none" stroke="#181818" stroke-width="3" stroke-linecap="round"/>
+    <text x="753" y="551" fill="#2775bd" font-size="23">SIMPLE. FAST. MINE.</text>
+    <text x="191" y="244" fill="#ee6b2f" font-size="20">KEEP PUSHING</text>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M337 298 l23-20 M346 314 l29-6" stroke="#ee6b2f" stroke-width="4"/>
+    <path d="M1044 243 l20-10 M1048 262 l24 2" stroke="#2775bd" stroke-width="4"/>
+  </g>
+</svg>

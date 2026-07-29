@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff"/>
+
+  <!-- The old laptop, revived as a server. -->
+  <g fill="none" stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M339 167 Q337 151 353 148 L763 151 Q779 151 780 168 L792 414 L321 412 Z" stroke-width="5"/>
+    <path d="M359 177 Q357 169 369 168 L751 170 L758 380 L344 377 Z" stroke-width="3"/>
+    <path d="M300 414 Q294 416 301 426 L325 451 Q332 458 350 458 L784 459 Q802 458 810 450 L830 426 Q836 416 825 415 Z" stroke-width="5"/>
+    <path d="M494 421 Q496 438 509 439 L626 439 Q640 438 642 422" stroke-width="3"/>
+    <path d="M364 203 Q386 194 410 202 M367 217 Q390 208 411 215" stroke="#2775bd" stroke-width="4"/>
+    <circle cx="704" cy="201" r="7" fill="#ee6b2f" stroke="none"/>
+    <circle cx="730" cy="201" r="7" fill="#2775bd" stroke="none"/>
+    <path d="M704 226 L704 251 M730 226 L730 267" stroke-width="3"/>
+    <path d="M704 251 q13 11 26 0" stroke="#ee6b2f" stroke-width="4"/>
+    <path d="M481 277 q82-54 165 0 q-7 72-83 72 q-75-1-82-72z" stroke-width="4"/>
+    <path d="M508 277 q54-31 108 0" stroke-width="3"/>
+    <circle cx="537" cy="305" r="7" fill="#181818" stroke="none"/>
+    <circle cx="589" cy="305" r="7" fill="#181818" stroke="none"/>
+    <path d="M545 331 q18 9 36 0" stroke-width="3"/>
+  </g>
+
+  <!-- Xiaohei performs the core action: connecting the machine. -->
+  <g stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M169 352 Q171 299 210 286 Q251 283 263 331 L258 426 Q238 448 190 436 Q168 422 169 352Z" fill="#181818" stroke-width="4"/>
+    <circle cx="205" cy="329" r="7" fill="#fff" stroke="none"/>
+    <circle cx="235" cy="329" r="7" fill="#fff" stroke="none"/>
+    <path d="M190 435 Q181 474 170 502 M236 439 Q247 474 246 506" fill="none" stroke-width="5"/>
+    <path d="M151 505 q20-5 28 1 M237 507 q20-4 28 3" fill="none" stroke-width="5"/>
+    <path d="M258 359 Q285 357 306 389" fill="none" stroke-width="5"/>
+    <circle cx="309" cy="392" r="8" fill="#181818" stroke="none"/>
+  </g>
+
+  <!-- Network cable carries the laptop's second life. -->
+  <g fill="none" stroke="#ee6b2f" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M303 390 Q270 492 367 510 Q495 534 612 496 Q706 466 767 490 Q837 516 890 468" stroke-width="7"/>
+    <path d="M882 462 l17-4 l-5 18" stroke-width="6"/>
+    <path d="M307 374 l18 7 l-8 25 l-18-7z" fill="#fff" stroke-width="4"/>
+    <path d="M309 377 l4-10 M316 380 l4-10" stroke-width="3"/>
+  </g>
+
+  <!-- Services emerge from the home server without becoming a formal diagram. -->
+  <g fill="none" stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M820 202 q33-34 67-4 q46-22 63 20 q40 2 37 37 q-3 27-39 27 L834 281 q-43-1-45-35 q-2-31 31-44z" stroke-width="4"/>
+    <path d="M841 250 q17-19 36 0 q18-19 36 0" stroke="#2775bd" stroke-width="4"/>
+    <circle cx="943" cy="244" r="6" fill="#2775bd" stroke="none"/>
+    <path d="M851 334 q20-28 40 0 q20-28 40 0 q-1 36-40 54 q-39-18-40-54z" stroke-width="4"/>
+    <path d="M875 348 l11 11 l23-28" stroke="#2775bd" stroke-width="5"/>
+    <path d="M967 368 l37-16 l37 16 l-37 18z M967 368 v46 l37 18 l37-18 v-46 M1004 386 v46" stroke-width="4"/>
+  </g>
+
+  <!-- The recurring cloud bill is rejected. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M891 91 q21-30 51-6 q35-16 51 17 q31 1 32 27 q0 28-34 29 l-92-1 q-31-1-32-27 q-1-25 24-39z" stroke="#181818" stroke-width="4"/>
+    <path d="M900 79 l112 91" stroke="#d94a42" stroke-width="7"/>
+    <path d="M1009 79 L898 170" stroke="#d94a42" stroke-width="7"/>
+  </g>
+
+  <!-- Sparse handwritten annotations. -->
+  <g font-family="DejaVu Sans, sans-serif" font-weight="700" letter-spacing="2">
+    <text x="335" y="115" fill="#181818" font-size="25">OLD LAPTOP</text>
+    <path d="M338 123 q87 9 172-1" fill="none" stroke="#181818" stroke-width="3" stroke-linecap="round"/>
+    <text x="655" y="372" fill="#d94a42" font-size="27">SECOND LIFE!</text>
+    <path d="M663 382 q90 11 181 2" fill="none" stroke="#d94a42" stroke-width="3" stroke-linecap="round"/>
+    <text x="91" y="269" fill="#2775bd" font-size="21">PLUG IT IN</text>
+    <path d="M158 277 q35 13 48 3" fill="none" stroke="#2775bd" stroke-width="3"/>
+    <text x="897" y="126" fill="#d94a42" font-size="21">$14 / MO</text>
+    <text x="845" y="530" fill="#ee6b2f" font-size="24">HOME SERVER</text>
+  </g>
+
+  <!-- Small motion marks keep the sketch alive. -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M284 311 l24-16 M295 328 l30-5" stroke="#ee6b2f" stroke-width="4"/>
+    <path d="M789 177 l18-20 M803 190 l27-7" stroke="#2775bd" stroke-width="4"/>
+    <path d="M1054 302 l18-8 M1057 318 l22 3" stroke="#181818" stroke-width="3"/>
+  </g>
+</svg>

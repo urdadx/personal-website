@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff"/>
+
+  <!-- Alice and Bob are deliberately simple endpoints. -->
+  <g fill="none" stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M102 213 Q102 196 119 195 L270 196 Q286 196 286 213 L284 404 Q284 421 267 420 L119 420 Q102 420 103 403Z" stroke-width="5"/>
+    <path d="M124 231 L264 231 L263 369 L124 369Z" stroke-width="3"/>
+    <circle cx="194" cy="296" r="27" stroke="#2775bd" stroke-width="4"/>
+    <path d="M151 345 q43-42 86 0" stroke="#2775bd" stroke-width="4"/>
+    <circle cx="194" cy="397" r="7" fill="#181818" stroke="none"/>
+
+    <path d="M916 213 Q916 196 933 195 L1084 196 Q1100 196 1100 213 L1098 404 Q1098 421 1081 420 L933 420 Q916 420 917 403Z" stroke-width="5"/>
+    <path d="M938 231 L1078 231 L1077 369 L938 369Z" stroke-width="3"/>
+    <circle cx="1008" cy="296" r="27" stroke="#2775bd" stroke-width="4"/>
+    <path d="M965 345 q43-42 86 0" stroke="#2775bd" stroke-width="4"/>
+    <circle cx="1008" cy="397" r="7" fill="#181818" stroke="none"/>
+  </g>
+
+  <!-- Xiaohei carries the locked message through the hostile middle. -->
+  <g stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M528 309 Q528 257 568 244 Q611 245 622 291 L617 390 Q598 412 551 400 Q528 386 528 309Z" fill="#181818" stroke-width="4"/>
+    <circle cx="563" cy="283" r="7" fill="#fff" stroke="none"/>
+    <circle cx="593" cy="283" r="7" fill="#fff" stroke="none"/>
+    <path d="M547 399 Q536 436 531 469 M595 403 Q607 436 605 471" fill="none" stroke-width="5"/>
+    <path d="M512 471 q20-5 28 1 M596 472 q20-5 28 2" fill="none" stroke-width="5"/>
+    <path d="M530 329 Q506 317 487 337 M619 329 Q642 317 660 337" fill="none" stroke-width="5"/>
+  </g>
+
+  <!-- Locked box is the message: Xiaohei's job is impossible without it. -->
+  <g fill="#fff" stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M481 316 L578 317 L579 389 L480 388Z" stroke-width="5"/>
+    <path d="M503 316 q0-45 27-45 q28 0 28 45" fill="none" stroke-width="5"/>
+    <circle cx="530" cy="350" r="8" fill="#ee6b2f" stroke="none"/>
+    <path d="M530 356 v15" fill="none" stroke="#ee6b2f" stroke-width="5"/>
+  </g>
+
+  <!-- The orange path connects endpoints while the middle cannot inspect it. -->
+  <g fill="none" stroke="#ee6b2f" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M286 300 Q395 217 487 302 M660 302 Q783 218 915 300" stroke-width="7"/>
+    <path d="M899 287 l18 13 l-18 12" stroke-width="6"/>
+    <path d="M469 287 l18 13 l-18 12" stroke-width="6"/>
+  </g>
+
+  <!-- Intermediary hands reach in but cannot open the message. -->
+  <g fill="none" stroke="#181818" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M383 116 q-7 66 27 99 q20 18 47 17 M383 117 q18 1 21 22 M383 117 q-17 5-14 25" stroke-width="5"/>
+    <path d="M787 116 q6 66-28 99 q-20 18-47 17 M787 117 q-18 1-21 22 M787 117 q17 5 14 25" stroke-width="5"/>
+    <path d="M420 219 l27 29 M752 219 l-28 29" stroke="#d94a42" stroke-width="6"/>
+    <path d="M439 219 l-27 29 M733 219 l28 29" stroke="#d94a42" stroke-width="6"/>
+  </g>
+
+  <!-- Only the destination has the matching key. -->
+  <g fill="none" stroke="#2775bd" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="1010" cy="485" r="22" stroke-width="5"/>
+    <path d="M988 485 h-66 l-15 15 M946 485 v18 M932 485 v12" stroke-width="6"/>
+    <path d="M978 449 q31-22 61 0" stroke-width="3"/>
+  </g>
+
+  <!-- Sparse labels, no explanatory title. -->
+  <g font-family="DejaVu Sans, sans-serif" font-weight="700" letter-spacing="2">
+    <text x="142" y="168" fill="#181818" font-size="24">ALICE</text>
+    <text x="967" y="168" fill="#181818" font-size="24">BOB</text>
+    <text x="459" y="540" fill="#ee6b2f" font-size="25">LOCKED IN TRANSIT</text>
+    <path d="M460 550 q135 10 268 0" fill="none" stroke="#ee6b2f" stroke-width="3" stroke-linecap="round"/>
+    <text x="321" y="88" fill="#d94a42" font-size="20">CAN'T READ IT</text>
+    <text x="900" y="548" fill="#2775bd" font-size="20">ONLY BOB'S KEY</text>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M504 227 l-14-22 M523 221 l-3-27 M647 228 l15-21" stroke="#ee6b2f" stroke-width="4"/>
+    <path d="M844 333 l22-8 M847 351 l26 3" stroke="#2775bd" stroke-width="4"/>
+  </g>
+</svg>
