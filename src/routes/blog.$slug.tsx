@@ -76,6 +76,20 @@ export const Route = createFileRoute("/blog/$slug")({
           : "https://urdadx.com/og-image.png",
       },
       {
+        property: "og:image:secure_url",
+        content: loaderData?.post.ogImage
+          ? `https://urdadx.com${loaderData.post.ogImage}`
+          : "https://urdadx.com/og-image.png",
+      },
+      {
+        property: "og:image:type",
+        content:
+          loaderData?.post.ogImage?.endsWith(".jpg") ||
+          loaderData?.post.ogImage?.endsWith(".jpeg")
+            ? "image/jpeg"
+            : "image/png",
+      },
+      {
         property: "og:image:width",
         content: "1200",
       },
@@ -86,6 +100,14 @@ export const Route = createFileRoute("/blog/$slug")({
       {
         property: "og:image:alt",
         content: loaderData?.post.title || "Blog Post",
+      },
+      {
+        property: "og:site_name",
+        content: "Abdul Wahab",
+      },
+      {
+        property: "og:locale",
+        content: "en_US",
       },
       {
         property: "article:author",
@@ -112,6 +134,10 @@ export const Route = createFileRoute("/blog/$slug")({
         content: loaderData?.post.ogImage
           ? `https://urdadx.com${loaderData.post.ogImage}`
           : "https://urdadx.com/og-image.png",
+      },
+      {
+        name: "twitter:image:alt",
+        content: loaderData?.post.title || "Blog Post",
       },
       {
         name: "robots",
