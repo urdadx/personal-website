@@ -6,7 +6,7 @@ export function Header() {
           <div className="flex items-center gap-3 mb-5">
             <img
               className="w-12 h-12 rounded-full"
-              src="/images/pixel_pp.png"
+              src="/images/blob.avif"
               alt="Abdul Wahab Abass"
             />
             <div className="flex flex-col gap-1">
