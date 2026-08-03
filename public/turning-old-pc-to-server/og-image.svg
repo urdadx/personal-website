@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" shape-rendering="crispEdges">
+  <!-- Cozy 16-bit room, built on a 10px pixel grid -->
+  <rect width="1200" height="630" fill="#17152c"/>
+  <rect y="40" width="1200" height="430" fill="#342442"/>
+  <rect y="470" width="1200" height="160" fill="#573444"/>
+
+  <!-- wallpaper -->
+  <g fill="#47304f">
+    <rect x="0" y="70" width="1200" height="10"/><rect x="0" y="190" width="1200" height="10"/><rect x="0" y="310" width="1200" height="10"/>
+  </g>
+  <g fill="#2b203b">
+    <rect x="90" y="100" width="10" height="10"/><rect x="250" y="150" width="10" height="10"/><rect x="760" y="90" width="10" height="10"/>
+    <rect x="1040" y="150" width="10" height="10"/><rect x="160" y="260" width="10" height="10"/><rect x="920" y="280" width="10" height="10"/>
+  </g>
+
+  <!-- sunset window -->
+  <rect x="70" y="80" width="300" height="240" fill="#17152c"/>
+  <rect x="80" y="90" width="280" height="220" fill="#ef8354"/>
+  <rect x="80" y="90" width="280" height="70" fill="#754668"/>
+  <rect x="80" y="160" width="280" height="50" fill="#d05a5a"/>
+  <rect x="110" y="160" width="60" height="60" fill="#ffd166"/>
+  <rect x="80" y="220" width="280" height="90" fill="#32395a"/>
+  <path d="M80 250h40v-20h30v20h30v-40h30v40h50v-30h30v30h70v60H80z" fill="#22233c"/>
+  <rect x="210" y="80" width="20" height="240" fill="#17152c"/><rect x="70" y="195" width="300" height="20" fill="#17152c"/>
+  <rect x="60" y="310" width="320" height="20" fill="#211a31"/>
+
+  <!-- shelves and self-hosted hints -->
+  <rect x="820" y="90" width="300" height="20" fill="#211a31"/><rect x="840" y="110" width="20" height="110" fill="#211a31"/><rect x="1080" y="110" width="20" height="110" fill="#211a31"/>
+  <rect x="840" y="200" width="260" height="20" fill="#211a31"/>
+  <rect x="860" y="130" width="40" height="70" fill="#cf675f"/><rect x="870" y="140" width="20" height="10" fill="#f3b562"/>
+  <rect x="910" y="120" width="50" height="80" fill="#487a78"/><rect x="920" y="140" width="30" height="10" fill="#8fc6a3"/>
+  <rect x="970" y="145" width="70" height="55" fill="#6d597a"/><rect x="980" y="155" width="50" height="10" fill="#c7a7c9"/>
+  <!-- little server box -->
+  <rect x="1020" y="230" width="100" height="130" fill="#17152c"/><rect x="1030" y="240" width="80" height="110" fill="#4c4d67"/>
+  <rect x="1040" y="250" width="60" height="20" fill="#282a42"/><rect x="1040" y="280" width="60" height="20" fill="#282a42"/><rect x="1040" y="310" width="60" height="20" fill="#282a42"/>
+  <rect x="1050" y="255" width="10" height="10" fill="#70c1b3"/><rect x="1050" y="285" width="10" height="10" fill="#f3b562"/><rect x="1050" y="315" width="10" height="10" fill="#70c1b3"/>
+
+  <!-- desk -->
+  <rect x="360" y="390" width="650" height="30" fill="#2a1c2d"/>
+  <rect x="340" y="420" width="690" height="40" fill="#9b5b45"/>
+  <rect x="360" y="460" width="30" height="150" fill="#683b3e"/><rect x="970" y="460" width="30" height="150" fill="#683b3e"/>
+  <rect x="390" y="470" width="580" height="10" fill="#3d2935"/>
+
+  <!-- actual old laptop -->
+  <rect x="500" y="210" width="370" height="210" fill="#17152c"/>
+  <rect x="510" y="220" width="350" height="190" fill="#697386"/>
+  <rect x="530" y="240" width="310" height="150" fill="#142d3b"/>
+  <!-- Ubuntu terminal glow -->
+  <rect x="540" y="250" width="290" height="130" fill="#193c46"/>
+  <rect x="550" y="260" width="150" height="10" fill="#70c1b3"/>
+  <rect x="550" y="285" width="230" height="10" fill="#d6e6d5"/>
+  <rect x="550" y="310" width="190" height="10" fill="#d6e6d5"/>
+  <rect x="550" y="335" width="110" height="10" fill="#f3b562"/>
+  <rect x="680" y="335" width="80" height="10" fill="#70c1b3"/>
+  <rect x="550" y="360" width="10" height="10" fill="#f3b562"/>
+  <rect x="490" y="410" width="390" height="20" fill="#8994a8"/>
+  <path d="M470 430h430l30 20H440z" fill="#697386"/>
+  <rect x="620" y="430" width="120" height="10" fill="#4c5364"/>
+  <!-- VAIO wear -->
+  <rect x="520" y="225" width="30" height="10" fill="#4c5364"/><rect x="835" y="365" width="10" height="20" fill="#4c5364"/>
+
+  <!-- network cable runs into the wall server -->
+  <rect x="870" y="350" width="20" height="10" fill="#6dd3ce"/><rect x="880" y="350" width="10" height="80" fill="#6dd3ce"/>
+  <rect x="880" y="420" width="140" height="10" fill="#6dd3ce"/><rect x="1010" y="340" width="10" height="90" fill="#6dd3ce"/>
+  <rect x="860" y="340" width="20" height="30" fill="#e8ddcb"/><rect x="865" y="345" width="10" height="10" fill="#6dd3ce"/>
+
+  <!-- pixel character, earnestly tending the server -->
+  <!-- hair -->
+  <rect x="210" y="340" width="100" height="20" fill="#291d2b"/><rect x="190" y="360" width="130" height="70" fill="#291d2b"/>
+  <rect x="180" y="380" width="20" height="70" fill="#291d2b"/><rect x="310" y="380" width="20" height="70" fill="#291d2b"/>
+  <!-- face -->
+  <rect x="210" y="370" width="90" height="70" fill="#c98267"/><rect x="200" y="390" width="10" height="30" fill="#c98267"/><rect x="300" y="390" width="10" height="30" fill="#c98267"/>
+  <rect x="225" y="395" width="10" height="10" fill="#291d2b"/><rect x="275" y="395" width="10" height="10" fill="#291d2b"/>
+  <rect x="245" y="425" width="30" height="10" fill="#8c4a50"/>
+  <!-- hoodie/body -->
+  <rect x="200" y="440" width="120" height="100" fill="#3a6573"/><rect x="220" y="450" width="80" height="100" fill="#487a78"/>
+  <rect x="190" y="460" width="30" height="80" fill="#3a6573"/><rect x="300" y="460" width="30" height="60" fill="#3a6573"/>
+  <!-- arm reaching laptop -->
+  <rect x="320" y="490" width="90" height="20" fill="#3a6573"/><rect x="400" y="490" width="30" height="20" fill="#c98267"/>
+  <rect x="420" y="480" width="20" height="20" fill="#c98267"/>
+  <!-- legs -->
+  <rect x="215" y="540" width="40" height="60" fill="#29344d"/><rect x="275" y="540" width="40" height="60" fill="#29344d"/>
+  <rect x="195" y="590" width="60" height="20" fill="#211a31"/><rect x="275" y="590" width="60" height="20" fill="#211a31"/>
+
+  <!-- mug -->
+  <rect x="920" y="380" width="50" height="40" fill="#f3b562"/><rect x="970" y="390" width="20" height="20" fill="none" stroke="#f3b562" stroke-width="10"/>
+  <rect x="930" y="370" width="30" height="10" fill="#d6e6d5"/>
+
+  <!-- plant reclaiming e-waste -->
+  <rect x="110" y="420" width="90" height="20" fill="#c66b48"/><rect x="120" y="440" width="70" height="60" fill="#9b4f45"/>
+  <rect x="150" y="360" width="10" height="70" fill="#487a58"/>
+  <rect x="110" y="370" width="50" height="20" fill="#609b67"/><rect x="150" y="340" width="50" height="20" fill="#70ad71"/><rect x="160" y="390" width="50" height="20" fill="#487a58"/>
+
+  <!-- floor boards and warm light spill -->
+  <path d="M500 460h360l90 170H390z" fill="#6b4146" opacity=".55"/>
+  <g fill="#3d2935">
+    <rect x="0" y="520" width="1200" height="10"/><rect x="0" y="600" width="1200" height="10"/>
+    <rect x="100" y="470" width="10" height="150"/><rect x="660" y="470" width="10" height="160"/><rect x="1110" y="470" width="10" height="160"/>
+  </g>
+
+  <!-- tiny status motes -->
+  <g fill="#70c1b3"><rect x="900" y="280" width="10" height="10"/><rect x="930" y="250" width="10" height="10"/><rect x="960" y="290" width="10" height="10"/></g>
+  <g fill="#f3b562"><rect x="895" y="250" width="10" height="10"/><rect x="950" y="220" width="10" height="10"/></g>
+
+  <!-- understated OG title plaque -->
+  <rect x="50" y="30" width="570" height="70" fill="#17152c"/>
+  <text x="70" y="61" fill="#f3b562" font-family="monospace" font-size="19" font-weight="700" letter-spacing="3">A SECOND LIFE FOR MY</text>
+  <text x="70" y="91" fill="#f4ead5" font-family="monospace" font-size="31" font-weight="900" letter-spacing="2">OLD LAPTOP</text>
+  <rect x="640" y="48" width="130" height="34" fill="#234e52"/>
+  <text x="656" y="71" fill="#70c1b3" font-family="monospace" font-size="16" font-weight="700">● ONLINE</text>
+</svg>
