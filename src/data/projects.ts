@@ -25,8 +25,16 @@ export const projects: Project[] = [
     repoKey: "bizme",
   },
   {
+    title: "Blockade",
+    description: "A chrome extension to block distracting websites and apps",
+    link: "https://blockade.urdadx.com",
+    year: "2026",
+    status: "active",
+    repoKey: "blockade",
+  },
+  {
     title: "Librelinks",
-    description: "An open-source link in bio platform",
+    description: "An open-source link in bio platform for creators",
     link: "https://links.urdadx.com",
     year: "2023",
     status: "active",
@@ -34,10 +42,11 @@ export const projects: Project[] = [
   },
   {
     title: "Bundy",
-    description: "A fun wordsearch adventure game",
+    description: "Multiplayer wordsearch adventure game",
     link: "https://bundy.urdadx.com",
-    year: "2026",
+    year: "2025",
     status: "active",
     repoKey: "bundy",
   },
+
 ];
