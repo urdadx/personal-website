@@ -11,7 +11,7 @@ export const experience: Experience[] = [
     period: "2025—Present",
   },
   {
-    role: "Software Contractor",
+    role: "Software Engineer",
     company: "Pushbio Inc",
     period: "2025—2026",
   },
