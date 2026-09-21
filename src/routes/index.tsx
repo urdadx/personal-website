@@ -138,14 +138,13 @@ function Home() {
 			/>
 			<main className="mx-auto max-w-3xl px-6 py-16 md:px-10 md:py-24 lg:px-16">
 				<Header />
+				<ExperienceSection experience={experience} />
 				<ProjectsSection projects={projects} githubData={githubData} />
 				<GitHubActivitySection
 					githubCalendar={githubCalendar as ContributionCalendar | null}
 				/>
-				<ExperienceSection experience={experience} />
-				<ContactSection />
 				<WritingSection />
-
+				<ContactSection />
 				<footer className="pt-8 border-t border-border/20">
 					<p className="text-sm text-muted-foreground font-mono">
 						© {new Date().getFullYear()} Abdul Wahab
