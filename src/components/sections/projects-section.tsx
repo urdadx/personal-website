@@ -10,7 +10,7 @@ export function ProjectsSection({ projects, githubData }: ProjectsSectionProps) 
   return (
     <section className="mb-16">
       <h2 className="text-xl font-light mb-6" style={{ fontFamily: "Crimson Pro, serif" }}>
-        Selected Work
+        Projects
       </h2>
       <div className="space-y-4">
         {projects.map((project) => {
@@ -55,9 +55,8 @@ export function ProjectsSection({ projects, githubData }: ProjectsSectionProps) 
                 <div className="flex items-center gap-3 ml-4">
                   <span className="text-sm text-muted-foreground font-mono">{displayYear}</span>
                   <span
-                    className={`relative group/status inline-block size-1.5 rounded-full ${
-                      project.status === "active" ? "bg-green-500" : "bg-muted-foreground/30"
-                    }`}
+                    className={`relative group/status inline-block size-1.5 rounded-full ${project.status === "active" ? "bg-green-500" : "bg-muted-foreground/30"
+                      }`}
                     aria-label={project.status === "active" ? "Active development" : "Archived"}
                   >
                     <span className="absolute bottom-full right-0 mb-2 hidden group-hover/status:block whitespace-nowrap rounded bg-foreground px-2 py-1 text-xs text-background">

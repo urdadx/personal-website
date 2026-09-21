@@ -8,7 +8,7 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
   return (
     <section className="mb-16">
       <h2 className="text-xl font-light mb-6" style={{ fontFamily: "Crimson Pro, serif" }}>
-        Experience
+        Work Experience
       </h2>
       <div className="space-y-3">
         {experience.map((exp) => (
