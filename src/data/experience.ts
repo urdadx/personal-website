@@ -20,9 +20,5 @@ export const experience: Experience[] = [
     company: "Ahegel",
     period: "2023—2024",
   },
-  {
-    role: "Freelance",
-    company: "",
-    period: "2021—Present",
-  },
+
 ];
