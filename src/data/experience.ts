@@ -8,7 +8,7 @@ export const experience: Experience[] = [
   {
     role: "Software Engineer",
     company: "[Redacted Company]",
-    period: "2025—Present",
+    period: "2026—Present",
   },
   {
     role: "Software Engineer",
