@@ -37,13 +37,13 @@ export function ContactSection() {
         </ComesInGoesOutUnderline>
         <ComesInGoesOutUnderline
           as="a"
-          href="https://x.com/NerdyProgramme2"
+          href="https://x.com/urdaadx"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex text-start font-mono text-sm text-muted-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/50"
           direction="right"
         >
-          x.com/NerdyProgramme2
+          x.com/urdaadx
         </ComesInGoesOutUnderline>
       </div>
     </section>
