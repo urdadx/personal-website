@@ -17,6 +17,14 @@ export const projects: Project[] = [
     repoKey: "padyna",
   },
   {
+    title: "Nukri",
+    description: "A fast terminal file manager for Linux",
+    link: "https://nukri.urdadx.com",
+    year: "2026",
+    status: "active",
+    repoKey: "nukri",
+  },
+  {
     title: "Bizme",
     description: "Better audience engagement backend for your content",
     link: "https://bizme.urdadx.com",
@@ -33,14 +41,6 @@ export const projects: Project[] = [
     repoKey: "blockade",
   },
   {
-    title: "Librelinks",
-    description: "An open-source link in bio platform for creators",
-    link: "https://links.urdadx.com",
-    year: "2023",
-    status: "active",
-    repoKey: "librelinks",
-  },
-  {
     title: "Bundy",
     description: "Multiplayer wordsearch adventure game",
     link: "https://bundy.urdadx.com",
@@ -48,5 +48,4 @@ export const projects: Project[] = [
     status: "active",
     repoKey: "bundy",
   },
-
 ];
